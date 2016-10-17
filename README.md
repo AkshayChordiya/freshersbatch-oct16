@@ -25,3 +25,6 @@ All the projects or assignments developed for training at Xoriant Pvt. Ltd. will
   - QueuedArray
   - Singleton
   - DoublyLinkedList
+  - Inheritance
+	* EmployeeMain
+	* Bank
