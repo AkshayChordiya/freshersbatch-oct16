@@ -1,3 +1,20 @@
 # Freshers Batch October 2016
 
-All the projects made will be pushed over here 
+All the projects or assignments developed for training at Xoriant Pvt. Ltd. will be pushed here
+
+## Table of Contents
+
+- Sample Project
+- SQL
+  - Basic SQL queries
+  - Complex SQL queries
+- Basic Java
+  - Hello world
+  - Cmd
+  - CmdInt
+  - Subject
+  - Table
+  - Armstrong
+  - ArmstrongFinder
+  - GUI
+  - Lottery
