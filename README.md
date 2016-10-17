@@ -18,3 +18,10 @@ All the projects or assignments developed for training at Xoriant Pvt. Ltd. will
   - ArmstrongFinder
   - GUI
   - Lottery
+  - Date
+  - Complex
+  - Account
+  - StackedArray
+  - QueuedArray
+  - Singleton
+  - DoublyLinkedList
