@@ -8,23 +8,33 @@ All the projects or assignments developed for training at Xoriant Pvt. Ltd. will
 - SQL
   - Basic SQL queries
   - Complex SQL queries
-- Basic Java
-  - Hello world
-  - Cmd
-  - CmdInt
-  - Subject
-  - Table
-  - Armstrong
-  - ArmstrongFinder
-  - GUI
-  - Lottery
-  - Date
-  - Complex
-  - Account
-  - StackedArray
-  - QueuedArray
-  - Singleton
-  - DoublyLinkedList
+- Java
+  - Basic
+	- Hello world
+	- Cmd
+	- CmdInt
+	- Subject
+	- Table
+	- Armstrong
+	- ArmstrongFinder
+	- GUI
+	- Lottery
+	- Date
+	- Complex
+	- Account
+	- StackedArray
+	- QueuedArray
+	- Singleton
+	- DoublyLinkedList
   - Inheritance
-	* EmployeeMain
-	* Bank
+	- EmployeeMain
+	- Bank
+  - Abstract
+	- ShapeMain
+	- PersistanceMain
+	- DesertShop
+  - Interface
+	- Cloning
+	- EmpInt
+	- EmpSort
+	- PersonMain
