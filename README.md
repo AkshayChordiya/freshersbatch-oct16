@@ -41,3 +41,6 @@ All the projects or assignments developed for training at Xoriant Pvt. Ltd. will
   - Package
 	- Student
 	- Faculty
+  - String 
+	- StringPool
+	- Banner
