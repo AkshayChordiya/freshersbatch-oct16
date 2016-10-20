@@ -44,3 +44,11 @@ All the projects or assignments developed for training at Xoriant Pvt. Ltd. will
   - String 
 	- StringPool
 	- Banner
+  - Reflection
+	- InvokerMain
+	- ObjectMaker
+	- ReflectInfo
+	- ReflectPolicy
+  - AnnotationEnum
+	- AnnotationMain
+	- EnumMain	
