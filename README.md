@@ -51,4 +51,10 @@ All the projects or assignments developed for training at Xoriant Pvt. Ltd. will
 	- ReflectPolicy
   - AnnotationEnum
 	- AnnotationMain
-	- EnumMain	
+	- EnumMain
+  - NestedClass
+	- CacheManager
+	- BloodPressureManager
+  - Exception
+	- Custom Exception
+	- Try with resource
