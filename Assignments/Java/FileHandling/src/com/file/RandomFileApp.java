@@ -51,6 +51,7 @@ public class RandomFileApp {
 			pointer = raf.getFilePointer();
 			int tempNo = raf.readInt();
 			raf.readUTF();
+			raf.readDouble();
 			if (no == tempNo) {
 				raf.seek(pointer);
 				System.out.println("Found and Delete");
@@ -68,20 +69,19 @@ public class RandomFileApp {
 	public static void read(double minSalary) throws IOException {
 		RandomAccessFile raf = new RandomAccessFile("crud.txt", "r");
 		long pointer = 0;
+		System.out.println("Showing accounts with salary more than " + minSalary);
 		while (raf.getFilePointer() < raf.length()) {
 			pointer = raf.getFilePointer();
 			raf.readInt();
 			raf.readUTF();
-			if (raf.readDouble() > minSalary) {
-				System.out.println("Showing accounts with salary more than " + minSalary);
+			double salary = raf.readDouble();
+			if (salary > minSalary) {
 				raf.seek(pointer);
+				System.out
+				.println("No = " + raf.readInt() + ", Name = " + raf.readUTF() + ", Balance = " + raf.readDouble());
 			} else {
-				System.out.println("No account");
-				raf.close();
-				return;
+				break;
 			}
-			System.out
-					.println("No = " + raf.readInt() + ", Name = " + raf.readUTF() + ", Balance = " + raf.readDouble());
 		}
 		raf.close();
 		System.out.println("Read");
@@ -94,6 +94,7 @@ public class RandomFileApp {
 			pointer = raf.getFilePointer();
 			int tempNo = raf.readInt();
 			raf.readUTF();
+			raf.readDouble();
 			if (account.accountNo == tempNo) {
 				raf.seek(pointer);
 				System.out.println("Found and updated!");
@@ -110,6 +111,7 @@ public class RandomFileApp {
 
 	public static void create(Account account) throws IOException {
 		RandomAccessFile raf = new RandomAccessFile("crud.txt", "rw");
+		raf.seek(raf.length());
 		raf.writeInt(account.accountNo);
 		raf.writeUTF(account.name);
 		raf.writeDouble(account.balance);
