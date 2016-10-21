@@ -58,3 +58,10 @@ All the projects or assignments developed for training at Xoriant Pvt. Ltd. will
   - Exception
 	- Custom Exception
 	- Try with resource
+  - File Handling
+	- CopyApp
+	- FileDetails
+	- AccountStore
+	- SequenceApp
+	- SerializeApp
+	- RandomFileApp
