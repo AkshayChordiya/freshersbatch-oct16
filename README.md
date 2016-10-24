@@ -65,3 +65,7 @@ All the projects or assignments developed for training at Xoriant Pvt. Ltd. will
 	- SequenceApp
 	- SerializeApp
 	- RandomFileApp
+  - JDBC
+	- JDBCMain
+	- JDBCPreparedMain
+	- Copier	
