@@ -75,5 +75,13 @@ public class BallGame extends Frame implements Runnable {
 			repaint();
 		}
 	}
+	
+	private void hold() {
+		try {
+			wait();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
 
 }
