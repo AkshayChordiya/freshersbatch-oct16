@@ -13,13 +13,22 @@
 
 		<property name="dialect">org.hibernate.dialect.OracleDialect</property>
 		<property name="show_sql">true</property>
-		<property name="hbm2ddl.auto">update</property>
+		<property name="hbm2ddl.auto">create</property>
 
 		<property name="hibernate.c3p0.min_size">5</property>
 		<property name="hibernate.c3p0.max_size">20</property>
 
 		<mapping class="com.hibernate.example.Product"/>
 		<mapping class="com.hibernate.criteria.Employee"/>
+		
+		<mapping class="com.hibernate.mapping.customer.Customer"/>
+		<mapping class="com.hibernate.mapping.customer.Enquiry"/>
+		
+		<mapping class="com.hibernate.mapping.market.Market"/>
+		<mapping class="com.hibernate.mapping.market.Stock"/>
+		
+		<mapping class="com.hibernate.mapping.student.Student"/>
+		<mapping class="com.hibernate.mapping.student.Course"/>
 
 
 </session-factory>
