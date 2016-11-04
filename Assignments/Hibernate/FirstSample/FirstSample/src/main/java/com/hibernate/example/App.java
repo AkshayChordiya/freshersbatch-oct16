@@ -3,6 +3,7 @@ package com.hibernate.example;
 import java.util.List;
 
 import org.hibernate.Query;
+import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -21,22 +22,25 @@ public class App {
 		
 		// Create
 		Product product = createProduct(s1);
-		Long productId = product.getId();
+		//Long productId = product.getId();
 		
 		// Read
 		showAllProducts(s1);
 		
+		//insertProductSQL(s1);
+		
 		// Update
-		product = updateProduct(s1, productId);
+		//product = updateProduct(s1, productId);
 		
 		showAllProducts(s1);
 		
 		// Delete
-		deleteProduct(s1, product);
+		//deleteProduct(s1, product);
 		
 		showAllProducts(s1);
 		
 		s1.close();
+		sessionFactory.close();
 	}
 
 	private static void deleteProduct(Session s1, Product product) {
@@ -56,10 +60,21 @@ public class App {
 
 	private static Product createProduct(Session s1) {
 		Transaction transaction = s1.beginTransaction();
-		Product product = new Product("Xerox", 10);
+		Product product = new Product("Nexus", 10);
 		s1.save(product);
 		transaction.commit();
 		return product;
+	}
+	
+	private static void insertProductSQL(Session s1) {
+		Transaction transaction = s1.beginTransaction();
+		SQLQuery sqlQuery = s1.createSQLQuery("INSERT INTO PRODUCT_HIBERNATE VALUES(:id, :name, :cost)");
+		sqlQuery.setInteger("id", 3);
+		sqlQuery.setString("name", "Citizen");
+		sqlQuery.setFloat("cost", 40);
+		int update = sqlQuery.executeUpdate();
+		System.out.println("Insert " + update + " rows");
+		transaction.commit();
 	}
 
 	private static void showAllProducts(Session s1) {

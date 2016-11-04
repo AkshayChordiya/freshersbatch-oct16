@@ -19,6 +19,7 @@
 		<property name="hibernate.c3p0.max_size">20</property>
 
 		<mapping class="com.hibernate.example.Product"/>
+		<mapping class="com.hibernate.criteria.Employee"/>
 
 
 </session-factory>
