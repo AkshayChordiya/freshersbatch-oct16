@@ -17,18 +17,46 @@
 
 		<property name="hibernate.c3p0.min_size">5</property>
 		<property name="hibernate.c3p0.max_size">20</property>
-
-		<mapping class="com.hibernate.example.Product"/>
-		<mapping class="com.hibernate.criteria.Employee"/>
 		
-		<mapping class="com.hibernate.mapping.customer.Customer"/>
+		<!-- HIBERNATE CACHE -->
+		<property name="cache.provider_class">org.hibernate.cache.EhCacheProvider</property>  
+		<property name="hibernate.cache.use_second_level_cache">true</property>
+		<property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory</property>
+		
+		<mapping class="com.hibernate.cache.Product"/>
+
+		<!-- transactional|read-write|nonstrict-read-write|read-only -->
+		<class-cache usage="read-only" class="com.hibernate.cache.Product"/>
+
+		<!-- <mapping class="com.hibernate.example.Product"/>
+		<mapping class="com.hibernate.criteria.Employee"/> -->
+		
+		<!-- <mapping class="com.hibernate.mapping.customer.Customer"/>
 		<mapping class="com.hibernate.mapping.customer.Enquiry"/>
 		
 		<mapping class="com.hibernate.mapping.market.Market"/>
 		<mapping class="com.hibernate.mapping.market.Stock"/>
 		
 		<mapping class="com.hibernate.mapping.student.Student"/>
-		<mapping class="com.hibernate.mapping.student.Course"/>
+		<mapping class="com.hibernate.mapping.student.Course"/> -->
+		
+		<!--  SINGLE TABLE -->
+		<!-- Combines all the entity in vehicle table  -->
+		<!-- <mapping class="com.hibernate.singletable.Vehicle"/>
+		<mapping class="com.hibernate.singletable.Bike"/>
+		<mapping class="com.hibernate.singletable.Car"/> -->
+		 
+		<!-- TABLE PER CLASS -->
+		<!-- Makes tables of sub-entity  -->
+		<!-- <mapping class="com.hibernate.tableperclass.Vehicle"/>
+		<mapping class="com.hibernate.tableperclass.Bike"/>
+		<mapping class="com.hibernate.tableperclass.Car"/> -->
+		
+		<!-- TABLE PER SUBCLASS -->
+		<!-- Makes tables of sub-entity  -->
+		<!-- <mapping class="com.hibernate.tablepersubclass.Vehicle"/>
+		<mapping class="com.hibernate.tablepersubclass.Bike"/>
+		<mapping class="com.hibernate.tablepersubclass.Car"/> -->
 
 
 </session-factory>
