@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+http://www.springframework.org/schema/beans/spring-beans-4.1.xsd">
+
+	<!-- Item Beans -->
+	<bean id="pizzaItemBean" class="com.spring.model.Item">
+		<property name="itemName" value="Pizza" />
+		<property name="price" value="150" />
+	</bean>
+	
+	<bean id="shirtItemBean" class="com.spring.model.Item">
+		<property name="itemName" value="Shirt" />
+		<property name="price" value="400" />
+	</bean>
+	
+	<!-- Food Beans  -->
+	<bean id="foodOrderBean" class="com.spring.model.Order">
+		<property name="orderName" value="Food" />
+		<property name="item" ref="pizzaItemBean" />
+	</bean>
+	
+	<bean id="clothesOrderBean" class="com.spring.model.Order">
+		<property name="orderName" value="Clothes" />
+		<property name="item" ref="shirtItemBean" />
+	</bean>
+
+</beans>

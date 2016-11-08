@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+http://www.springframework.org/schema/beans/spring-beans-4.1.xsd">
+
+	<!-- Users -->
+	<bean id="user1" class="com.spring.chat.User">
+		<property name="name" value="Akshay" />
+		<property name="password" value="1234" />
+	</bean>
+	<bean id="user2" class="com.spring.chat.User">
+		<property name="name" value="Dell" />
+		<property name="password" value="1220" />
+	</bean>
+	<bean id="user3" class="com.spring.chat.User">
+		<property name="name" value="AOC" />
+		<property name="password" value="1223" />
+	</bean>
+
+	<!-- Chat Room 1 -->
+	<bean id="chatRoomBean1" class="com.spring.chat.ChatRoom"> 
+		<property name="chatRoomName" value="Hello" />
+		<property name="messages">
+			<set>
+				<value>Say</value>
+				<value>Hello</value>
+				<value>To</value>
+				<value>Spring</value>
+			</set>
+		</property>
+		<property name="users">
+			<set>
+				<ref bean="user1" />
+				<ref bean="user2" />
+			</set>
+		</property>
+	</bean>
+	
+	<!-- Chat Room 2 -->
+	<bean id="chatRoomBean2" class="com.spring.chat.ChatRoom">
+		<property name="chatRoomName" value="Food" />
+		<property name="messages">
+			<set>
+				<value>Pizza</value>
+				<value>Burger</value>
+				<value>Pasta</value>
+				<value>Tacos</value>
+			</set>
+		</property>
+		<property name="users">
+			<set>
+				<ref bean="user3" />
+			</set>
+		</property>
+	</bean>
+
+</beans>
